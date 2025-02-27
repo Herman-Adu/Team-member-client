@@ -1,7 +1,6 @@
-import Link from "next/link";
 import Footer from "../components/Footer";
+//import MainMenu from "../components/Navbar";
 import Header from "../components/Header";
-import NavLink from "../components/NavLink";
 import "../styles/global.css";
 
 export const metadata = {
@@ -18,12 +17,18 @@ export default function RootLayout({ children }) {
             <div className="orange-circle blur-2xl w-64 h-64 rounded-full bg-orange-400/60 top-0 right-28 absolute"></div>
             <div className="blue-circle  blur-2xl w-64 h-64 rounded-full bg-blue-500/50 bottom-0 left-28 absolute" />
           </div> */}
-          <div className="absolute z-0 inset-0 overflow-hidden">
+          <div className="absolute z-0 inset-0">
             <div className="circle-one blur-3xl w-64 h-64 rounded-full bg-orange-400/60 top-0 right-28 absolute"></div>
             <div className="circle-two blur-3xl w-64 h-64 rounded-full bg-indigo-400/60 bottom-0 left-28 absolute"></div>
           </div>
-          <Header />
-          <main className="backdrop-blur z-10 max-w-4xl mx-auto bg-white/50 rounded-xl py-7 px-8 m-6 overflow-hidden">
+          <div className="z-20">
+            <Header />
+          </div>
+
+          {/* <MainMenu /> */}
+          {/* <main className="backdrop-blur z-10 max-w-4xl mx-auto bg-white/50 rounded-xl py-7 px-8 m-6 overflow-hidden"> */}
+          {/* <NavigationLargeScreens /> */}
+          <main className="max-w-4xl mx-auto bg-white/50 rounded-xl py-7 px-8 m-6 overflow-hidden">
             {children}
           </main>
           <Footer />

@@ -1,3 +1,4 @@
+import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
 // fetch data from strapi and return it
@@ -19,8 +20,7 @@ export default async function Page() {
       <h1 className="text-4xl mb-6 font-bold text-gray-700">
         Our Team Members
       </h1>
-
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 -z-10">
         {teamMembers.map((member) => {
           return (
             <Link

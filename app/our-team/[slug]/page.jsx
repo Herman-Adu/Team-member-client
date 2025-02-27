@@ -107,7 +107,9 @@ export default async function Page({ params }) {
 
       {/* final stage create 2 divs the first one will be the banner div and second will be our content div with prose */}
       <div className="text-white relative bg-gray-700 px-14 py-16 -mx-8 -mt-7">
-        <h2 className="text-6xl font-bold relative z-30">{member.name}</h2>
+        <h2 className="text-3xl sm:text-6xl font-bold relative z-10">
+          {member.name}
+        </h2>
         <img
           className="object-cover absolute top-0 bottom-0 left-1/2 right-0 block w-1/2 h-full opacity-50 filter grayscale"
           src={member.photo.formats.medium.url}
@@ -118,7 +120,7 @@ export default async function Page({ params }) {
       <div className="transform -translate-y-1/2">
         <Link
           href="/our-team"
-          className=" z-30text-sm bg-blue-500 text-white hover:bg-gray-600 hover:text-white inline-block rounded-lg py-3 px-5"
+          className=" z-30 text-sm bg-blue-500 text-white hover:bg-gray-600 hover:text-white inline-block rounded-lg py-3 px-5"
         >
           &laquo; Back to all team members
         </Link>
